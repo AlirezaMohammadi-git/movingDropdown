@@ -1,0 +1,143 @@
+/* -------------------------------------------------------------- */
+/* ---------------- GLOBAL PROPERTIES --------------------------- */
+/* -------------------------------------------------------------- */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  background-image: linear-gradient(
+      32deg,
+      rgba(255, 0, 0, 0.578),
+      transparent 70%
+    ),
+    linear-gradient(15deg, blue, transparent 70%),
+    linear-gradient(261deg, rgba(0, 128, 0, 0.775), transparent 70%),
+    linear-gradient(55deg, orange, transparent 70%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p {
+  color: black;
+}
+
+/* -------------------------------------------------------------- */
+/* --------------------- Navigation  ---------------------------- */
+/* -------------------------------------------------------------- */
+
+.navContainer {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0px 5rem;
+}
+
+/* -------------------------------------------------------------- */
+/* --------------------- List positining ------------------------ */
+/* -------------------------------------------------------------- */
+
+.fuckingList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fuckingList > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/* --------------------- list contents  */
+
+.content {
+  position: absolute;
+  top: 70px;
+  gap: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/* --------------------- triggers  */
+.enable.content {
+  visibility: visible;
+}
+
+.active.content {
+  opacity: 1;
+}
+
+.background.open {
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------- */
+/* --------------------- Componnents ---------------------------- */
+/* -------------------------------------------------------------- */
+
+.background {
+  background-color: rgba(245, 245, 245, 0.276);
+  border-radius: 4px;
+  transition: all 0.5s;
+  padding: 1rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.background span {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(245, 245, 245, 0.276) 50%,
+    transparent 50%
+  );
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  transform-origin: center;
+  transform: rotate(45deg);
+  top: -15px;
+  left: calc(50% - 15px);
+  position: absolute;
+}
+
+.small {
+  background-color: yellow;
+  width: 3rem;
+  height: 3rem;
+}
+
+.wide {
+  background-color: orangered;
+  width: 9rem;
+  height: 4rem;
+}
+
+.long {
+  width: 3rem;
+  height: 9rem;
+  background-color: black;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+button {
+  padding: 0.5rem;
+  color: white;
+}
