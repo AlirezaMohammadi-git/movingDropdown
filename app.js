@@ -25,7 +25,7 @@ function showContent() {
 
 function hideContents(e) {
   const content = this.querySelector(".content");
-  // Check if mouse is moving to .content
+  // Check if mouse is moving to .content by defining second target!
   const isLeavingToContent = e.relatedTarget?.closest(".content");
   if (isLeavingToContent) return; // Don't hide if hovering content
   content.classList.remove("enable", "active");
