@@ -16,11 +16,19 @@ function showContent() {
 
   background.classList.add("open");
 
+  // setting up click events
+  const wide = this.querySelector(".wide");
+  wide.addEventListener("click", print);
+
   setTimeout(() => {
     if (content.classList.contains("enable")) {
       content.classList.add("active");
     }
   }, 150);
+}
+
+function print() {
+  console.log("this is wide class");
 }
 
 function hideContents(e) {
@@ -30,6 +38,8 @@ function hideContents(e) {
   if (isLeavingToContent) return; // Don't hide if hovering content
   content.classList.remove("enable", "active");
   background.classList.remove("open");
+  // removing listeners
+  this.querySelector(".wide").removeEventListener("click", print);
 }
 
 buttons.forEach((button) => {
